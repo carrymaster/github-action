@@ -1,0 +1,16 @@
+# action.yml
+name: 'Serverless Action'
+description: 'Wrap action to serverless framework'
+inputs:
+  working-directory: 
+    description: 'Where the command is run'
+    required: false
+    default: './'
+  args:
+    description: 'Severless Arguments'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.working-directory }}
+    - ${{ inputs.args }}

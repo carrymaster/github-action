@@ -12,7 +12,7 @@ LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
 # Download serverless
-RUN npm i -g serverless@1.74.1
+RUN npm i -g serverless@1.75.1
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
